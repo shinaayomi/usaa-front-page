@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images//logo.svg" type="image/x-icon" />
+    <title>USAA</title>
+    <style>
+      :root {
+        --app-color: #0f2e4a;
+        --colored-text: #356d7a;
+        --app-gray: #ddf2f7;
+        --app-dark-gray: #605b45;
+        --app-yellow: #fef5ce;
+        --app-green: #4a6727;
+      }
+      body {
+        font-family: Gotham, Arial, sans-serif;
+        background-color: var(--app-color);
+        color: var(--app-gray);
+        margin: auto;
+      }
+      .flex {
+        display: flex;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .items-end {
+        align-items: flex-end;
+      }
+      .flex-1 {
+        flex: 1;
+      }
+      .gap-4 {
+        gap: 16px;
+      }
+      .gap-6 {
+        gap: 24px;
+      }
+      .text-center {
+        text-align: center;
+      }
+      nav {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        padding: 20px 16px;
+      }
+      nav a {
+        font-size: 14px;
+        color: var(--app-gray);
+        text-decoration: none;
+        padding: 8px 4px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* start hero */
+      .heroWrapper {
+        background: url("images/hero-bg.svg") no-repeat;
+        background-size: contain;
+        min-height: 60dvh;
+        padding: 80px 16px 20px;
+        & .hero {
+          display: grid;
+          grid-template-columns: 50% 320px;
+          row-gap: 40px;
+          justify-content: space-between;
+          @media (max-width: 768px) {
+            grid-template-columns: auto;
+          }
+
+          & h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+          }
+          & .join-text {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 40px;
+          }
+          & .join-btn {
+            background-color: white;
+            color: var(--colored-text);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 14px 32px;
+            display: inline-block;
+          }
+          /* form */
+          & form {
+            background-color: #fff;
+            color: var(--app-dark-gray);
+            padding: 25px 16px;
+            & h2 {
+              text-align: center;
+              margin-top: 0;
+              margin-bottom: 20px;
+            }
+            & .warningContainer {
+              display: flex;
+              gap: 6px;
+              background-color: var(--app-yellow);
+              padding: 16px 12px;
+              & span {
+                font-size: 13px;
+              }
+            }
+            & .inputWrapper {
+              border: 1px solid var(--app-dark-gray);
+              padding: 16px 12px;
+              & input {
+                width: 100%;
+                color: var(--colored-text);
+                font-size: 16px;
+                font-weight: 500;
+                /* margin-top: 8px; */
+                padding: 4px 0;
+                border: none;
+                outline: none;
+              }
+              & input::placeholder {
+                color: var(--colored-text);
+              }
+            }
+            & .rememberBox {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              & input[type="checkbox"] {
+                accent-color: var(--colored-text);
+                border-color: var(--colored-text);
+              }
+              & label {
+                font-size: 12px;
+              }
+            }
+            & .next-btn {
+              width: 100%;
+              background-color: var(--app-green);
+              color: #fff;
+              font-weight: 500;
+              padding: 16px;
+              border: none;
+              margin-bottom: 30px;
+            }
+            & .need-help {
+              color: var(--colored-text);
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+          /* end form */
+        }
+      }
+      /* end hero */
+
+      /* start footer */
+      footer {
+        padding: 20px 16px;
+        & a {
+          font-size: 14px;
+          color: #fff;
+          margin-bottom: 16px;
+        }
+        .copyright {
+          font-size: 12px;
+          margin-top: 12px;
+        }
+        & .suspended-footer {
+          position: fixed;
+          bottom: 35px;
+          right: 3%;
+          color: #5a748b;
+          & span {
+            font-size: 12px;
+          }
+        }
+      }
+      /* end footer */
+    </style>
+  </head>
+  <body>
+    <!-- start navbar -->
+    <nav class="flex justify-between items-end">
+      <a href="/">
+        <img src="/images/logo.svg" alt="USAA" width="40" height="40"
+      /></a>
+
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-6">
+          <a href="/">JOIN USAA</a>
+          <a href="/">REGISTER FOR ACCESS</a>
+        </div>
+        <span
+          style="width: 2px; height: 22px; background: var(--app-gray)"
+        ></span>
+        <button style="all: unset; cursor: pointer; color: var(--app-gray)">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            height="1em"
+            width="1em"
+            style="vertical-align: middle"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <main>
+      <section class="heroWrapper">
+        <div class="container">
+          <div class="hero">
+            <div>
+              <h2>New to USAA?</h2>
+              <p class="join-text">
+                become a member by selecting "Join USAA <br />
+                -it's easy and only takes few minutes.
+              </p>
+              <a href="/" class="join-btn">Join USAA</a>
+            </div>
+            <div>
+              <form action="">
+                <h2>Log On</h2>
+                <div class="warningContainer">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    height="1em"
+                    width="1em"
+                    style="color: red"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M228.9 79.9L51.8 403.1C40.6 423.3 55.5 448 78.9 448h354.3c23.3 0 38.2-24.7 27.1-44.9L283.1 79.9c-11.7-21.2-42.5-21.2-54.2 0zM273.6 214L270 336h-28l-3.6-122h35.2zM256 402.4c-10.7 0-19.1-8.1-19.1-18.4s8.4-18.4 19.1-18.4 19.1 8.1 19.1 18.4-8.4 18.4-19.1 18.4z"
+                    ></path>
+                  </svg>
+                  <span class="flex-1"
+                    >Sorry, the password you entered does not match what we have
+                    on file.
+                  </span>
+                </div>
+                <div
+                  class="inputWrapper"
+                  style="border-bottom: none; margin-top: 20px"
+                >
+                  <label for="">Online ID</label>
+                  <input type="text" placeholder="Input your id" />
+                </div>
+                <div class="inputWrapper flex items-center gap-4">
+                  <div class="flex-1">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Input your password" />
+                  </div>
+                  <span
+                    style="
+                      width: 1px;
+                      height: 32px;
+                      background: var(--app-dark-gray);
+                    "
+                  ></span>
+                  <button
+                    style="
+                      all: unset;
+                      cursor: pointer;
+                      color: var(--colored-text);
+                    "
+                  >
+                    Show
+                  </button>
+                </div>
+                <div class="rememberBox">
+                  <input type="checkbox" name="" id="checkbox" />
+                  <label for="checkbox">
+                    Remember this browser to logn faster next time
+                  </label>
+                </div>
+                <button class="next-btn">Next</button>
+                <div class="text-center">
+                  <a href="/" class="need-help">I need help loggin on</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- start footer -->
+    <footer>
+      <div class="container">
+        <div class="flex gap-4">
+          <a href="/">Security Center</a>
+          <a href="/">Privacy Center</a>
+          <a href="/">Accessibilty at USAA</a>
+        </div>
+        <div class="copyright">Copyright © 2023 USAA.</div>
+        <div class="copyright">NC-1120</div>
+        <div class="suspended-footer">
+          Activate Windows<br />
+          <span>Go to settings to activate Windows.</span>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+  </body>
+</html>
